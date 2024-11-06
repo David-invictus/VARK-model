@@ -1,7 +1,7 @@
 # **VARK model learning**
 Ontologia do modelo de aprendizagem sensorial VARK desenvolvido pelo professor Neil D. Fleming.
 
-==================================================================================================================================================================================
+============================================================================================================================================================================================================================
 
 O modelo VARK foi desenvolvido por Neil D. Fleming em 1987, com o objetivo de ajudar educadores a entender como os alunos aprendem melhor.
 
