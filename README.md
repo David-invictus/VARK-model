@@ -33,3 +33,27 @@ Aprendizes cinestésicas aprendem melhor fazendo e experimentando. Seja por meio
 Beneficiam-se mais ao realizar atividades práticas que envolvam interação física e experiência direta. 
 A prática e o envolvimento sensorial tornam a compreensão mais profunda e significativa, o que é especialmente útil em áreas como medicina, artesanato, engenharia e outros campos que exigem prática e experimentação.
 Elas gostam de fazer, experimentar, atividades práticas, experimentos ou trabalhos em grupo.
+
+# **Sobre a ontologia**
+
+Ontologia do modelo/estilo de aprendizagem sensorial VARK do professor Neil D. Fleming.
+Elaborada para a disciplina de Tópicos Especial em Engenharia de Software e Sistemas Computacionais I, ministrada pelo Professor Doutor Patrício de Alencar Silva, no Programa de Pós-Graduação em Ciência da Computação (Mestrado).
+
+## **Modelo OntoUML**
+
+Utilizou-se o software Visual Paradigm (v17.2), para confeccionados 3 visões do modelo em _OntoUML_ para explicar o modelo VARK nesta proposta de ontologia. São eles:
+
+1. **Estrutura do modelo VARK**
+Nesta visão, mostra-se uma visão geral do modelo/estilo de aprendizagem VARK. Distinguido os agentes envolvidos, bem como, suas relações.
+
+2. **Classificação dos estilos**
+Esta visão tem o foco em como pode-se classificar os aprendizes de acordo com sua habilidades. Distinguindo se o aprendiz tem um estilo Dominate, Primário, Secundário ou é do tipo Multimodal (quando tem competências em grau significativo nos quatro estilos).
+
+3. **Metodologia de ensino**
+Esta visão tem como objetivo descrever as melhores práticas que os educdores podem promover em suas aulas para os diferentes estilos do modelo VARK.
+
+## **Modelo OWL**
+Foi feita exportação do modelo para extensão _Turtle_ (.ttl) no Visual Paradigm.
+Com base no arquivo OntoUML, foi modelado um arquivo e _OWL_ no software **Protégé**.
+
+# **Telas**
