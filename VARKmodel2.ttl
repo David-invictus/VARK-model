@@ -1,0 +1,2123 @@
+@prefix : <http://example.com#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix gufo: <http://purl.org/nemo/gufo#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://example.com#> .
+
+<http://example.com> rdf:type owl:Ontology ;
+                      owl:imports gufo: ;
+                      rdfs:comment "VARK model ontology" ;
+                      rdfs:label "varkModel" .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://example.com#appliedMethodologyIn
+:appliedMethodologyIn rdf:type owl:ObjectProperty ;
+                      rdfs:range :TeachingMethodology .
+
+
+###  http://example.com#auralAuditiveStyleHasClass
+:auralAuditiveStyleHasClass rdf:type owl:ObjectProperty ;
+                            rdfs:subPropertyOf :auralPrefer ;
+                            rdfs:domain :AuralAuditiveStyle ;
+                            rdfs:range :Class .
+
+
+###  http://example.com#auralAuditiveStyleHasClassRecording
+:auralAuditiveStyleHasClassRecording rdf:type owl:ObjectProperty ;
+                                     rdfs:subPropertyOf :auralPrefer ;
+                                     rdfs:domain :AuralAuditiveStyle ;
+                                     rdfs:range :ClassRecording .
+
+
+###  http://example.com#auralAuditiveStyleHasConversations
+:auralAuditiveStyleHasConversations rdf:type owl:ObjectProperty ;
+                                    rdfs:subPropertyOf :auralPrefer ;
+                                    rdfs:domain :AuralAuditiveStyle ;
+                                    rdfs:range :Conversations .
+
+
+###  http://example.com#auralAuditiveStyleHasDiscussions
+:auralAuditiveStyleHasDiscussions rdf:type owl:ObjectProperty ;
+                                  rdfs:subPropertyOf :auralPrefer ;
+                                  rdfs:domain :AuralAuditiveStyle ;
+                                  rdfs:range :Discussions .
+
+
+###  http://example.com#auralAuditiveStyleHasLectures
+:auralAuditiveStyleHasLectures rdf:type owl:ObjectProperty ;
+                               rdfs:subPropertyOf :auralPrefer ;
+                               rdfs:domain :AuralAuditiveStyle ;
+                               rdfs:range :Lectures .
+
+
+###  http://example.com#auralAuditiveStyleHasListenAudio
+:auralAuditiveStyleHasListenAudio rdf:type owl:ObjectProperty ;
+                                  rdfs:subPropertyOf :auralPrefer ;
+                                  rdfs:domain :AuralAuditiveStyle ;
+                                  rdfs:range :ListenAudio .
+
+
+###  http://example.com#auralAuditiveStyleHasListenPodcasts
+:auralAuditiveStyleHasListenPodcasts rdf:type owl:ObjectProperty ;
+                                     rdfs:subPropertyOf :auralPrefer ;
+                                     rdfs:domain :AuralAuditiveStyle ;
+                                     rdfs:range :ListenPodcasts .
+
+
+###  http://example.com#auralAuditiveStyleHasMusic
+:auralAuditiveStyleHasMusic rdf:type owl:ObjectProperty ;
+                            rdfs:subPropertyOf :auralPrefer ;
+                            rdfs:domain :AuralAuditiveStyle ;
+                            rdfs:range :Music .
+
+
+###  http://example.com#auralAuditiveStyleHasOralPresentations
+:auralAuditiveStyleHasOralPresentations rdf:type owl:ObjectProperty ;
+                                        rdfs:subPropertyOf :auralPrefer ;
+                                        rdfs:domain :AuralAuditiveStyle ;
+                                        rdfs:range :OralPresentations .
+
+
+###  http://example.com#auralAuditiveStyleHasRecordings
+:auralAuditiveStyleHasRecordings rdf:type owl:ObjectProperty ;
+                                 rdfs:subPropertyOf :auralPrefer ;
+                                 rdfs:domain :AuralAuditiveStyle ;
+                                 rdfs:range :Recordings .
+
+
+###  http://example.com#auralAuditiveStyleHasSongs
+:auralAuditiveStyleHasSongs rdf:type owl:ObjectProperty ;
+                            rdfs:subPropertyOf :auralPrefer ;
+                            rdfs:domain :AuralAuditiveStyle ;
+                            rdfs:range :Songs .
+
+
+###  http://example.com#auralAuditiveStyleHasStudyGroup
+:auralAuditiveStyleHasStudyGroup rdf:type owl:ObjectProperty ;
+                                 rdfs:subPropertyOf :auralPrefer ;
+                                 rdfs:domain :AuralAuditiveStyle ;
+                                 rdfs:range :StudyGroup .
+
+
+###  http://example.com#auralPrefer
+:auralPrefer rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf :stylePrefer .
+
+
+###  http://example.com#belongsTo
+:belongsTo rdf:type owl:ObjectProperty ;
+           rdfs:domain :Learner ;
+           rdfs:range :LearningStyle .
+
+
+###  http://example.com#educatorHasLearningStyle
+:educatorHasLearningStyle rdf:type owl:ObjectProperty ;
+                          rdfs:range :LearningStyle_1 .
+
+
+###  http://example.com#imagesHasVisualStyle
+:imagesHasVisualStyle rdf:type owl:ObjectProperty ;
+                      rdfs:domain :Images ;
+                      rdfs:range :VisualStyle .
+
+
+###  http://example.com#kinestheticPrefer
+:kinestheticPrefer rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf :stylePrefer .
+
+
+###  http://example.com#kinestheticStyleHasEducationalGames
+:kinestheticStyleHasEducationalGames rdf:type owl:ObjectProperty ;
+                                     rdfs:subPropertyOf :kinestheticPrefer ;
+                                     rdfs:domain :KinestheticStyle ;
+                                     rdfs:range :EducationalGames .
+
+
+###  http://example.com#kinestheticStyleHasExperimenting
+:kinestheticStyleHasExperimenting rdf:type owl:ObjectProperty ;
+                                  rdfs:subPropertyOf :kinestheticPrefer ;
+                                  rdfs:domain :KinestheticStyle ;
+                                  rdfs:range :Experimenting .
+
+
+###  http://example.com#kinestheticStyleHasGroupWork
+:kinestheticStyleHasGroupWork rdf:type owl:ObjectProperty ;
+                              rdfs:subPropertyOf :kinestheticPrefer ;
+                              rdfs:domain :KinestheticStyle ;
+                              rdfs:range :GroupWork .
+
+
+###  http://example.com#kinestheticStyleHasMaking
+:kinestheticStyleHasMaking rdf:type owl:ObjectProperty ;
+                           rdfs:subPropertyOf :kinestheticPrefer ;
+                           rdfs:domain :KinestheticStyle ;
+                           rdfs:range :Making .
+
+
+###  http://example.com#kinestheticStyleHasObjectManipulation
+:kinestheticStyleHasObjectManipulation rdf:type owl:ObjectProperty ;
+                                       rdfs:subPropertyOf :kinestheticPrefer ;
+                                       rdfs:domain :KinestheticStyle ;
+                                       rdfs:range :ObjectManipulation .
+
+
+###  http://example.com#kinestheticStyleHasPracticalActivities
+:kinestheticStyleHasPracticalActivities rdf:type owl:ObjectProperty ;
+                                        rdfs:subPropertyOf :kinestheticPrefer ;
+                                        rdfs:domain :KinestheticStyle ;
+                                        rdfs:range :PracticalActivities .
+
+
+###  http://example.com#kinestheticStyleHasSimulations
+:kinestheticStyleHasSimulations rdf:type owl:ObjectProperty ;
+                                rdfs:subPropertyOf :kinestheticPrefer ;
+                                rdfs:domain :KinestheticStyle ;
+                                rdfs:range :Simulations .
+
+
+###  http://example.com#learningStyleHasLearner
+:learningStyleHasLearner rdf:type owl:ObjectProperty ;
+                         rdfs:domain :LearningStyle_1 .
+
+
+###  http://example.com#learningStyleHasTeachingMethodology
+:learningStyleHasTeachingMethodology rdf:type owl:ObjectProperty ;
+                                     rdfs:domain :LearningStyle_1 ;
+                                     rdfs:range :TeachingMethodology .
+
+
+###  http://example.com#methodologyAppliedTo
+:methodologyAppliedTo rdf:type owl:ObjectProperty ;
+                      rdfs:range :TeachingMethodology .
+
+
+###  http://example.com#readWritePrefer
+:readWritePrefer rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf :stylePrefer .
+
+
+###  http://example.com#readWriteStyleHasCreateDiagrams
+:readWriteStyleHasCreateDiagrams rdf:type owl:ObjectProperty ;
+                                 rdfs:subPropertyOf :readWritePrefer ;
+                                 rdfs:domain :ReadWriteStyle ;
+                                 rdfs:range :CreateDiagrams .
+
+
+###  http://example.com#readWriteStyleHasCreateList
+:readWriteStyleHasCreateList rdf:type owl:ObjectProperty ;
+                             rdfs:subPropertyOf :readWritePrefer ;
+                             rdfs:domain :ReadWriteStyle ;
+                             rdfs:range :CreateList .
+
+
+###  http://example.com#readWriteStyleHasReadTexts
+:readWriteStyleHasReadTexts rdf:type owl:ObjectProperty ;
+                            rdfs:subPropertyOf :readWritePrefer ;
+                            rdfs:domain :ReadWriteStyle ;
+                            rdfs:range :ReadTexts .
+
+
+###  http://example.com#readWriteStyleHasSummarizeContent
+:readWriteStyleHasSummarizeContent rdf:type owl:ObjectProperty ;
+                                   rdfs:subPropertyOf :readWritePrefer ;
+                                   rdfs:domain :ReadWriteStyle ;
+                                   rdfs:range :SummarizeContent .
+
+
+###  http://example.com#readWriteStyleHasWriteNotes
+:readWriteStyleHasWriteNotes rdf:type owl:ObjectProperty ;
+                             rdfs:subPropertyOf :readWritePrefer ;
+                             rdfs:domain :ReadWriteStyle ;
+                             rdfs:range :WriteNotes .
+
+
+###  http://example.com#stylePrefer
+:stylePrefer rdf:type owl:ObjectProperty .
+
+
+###  http://example.com#varkModelHasClassify
+:varkModelHasClassify rdf:type owl:ObjectProperty ;
+                      rdfs:domain :VARKModel ;
+                      rdfs:range :Classify .
+
+
+###  http://example.com#visualPrefer
+:visualPrefer rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf :stylePrefer .
+
+
+###  http://example.com#visualStyleHasDemonstrations
+:visualStyleHasDemonstrations rdf:type owl:ObjectProperty ;
+                              rdfs:subPropertyOf :visualPrefer ;
+                              rdfs:domain :VisualStyle ;
+                              rdfs:range :Demonstrations .
+
+
+###  http://example.com#visualStyleHasDiagrams
+:visualStyleHasDiagrams rdf:type owl:ObjectProperty ;
+                        rdfs:subPropertyOf :visualPrefer ;
+                        rdfs:domain :VisualStyle ;
+                        rdfs:range :Diagrams .
+
+
+###  http://example.com#visualStyleHasGraphs
+:visualStyleHasGraphs rdf:type owl:ObjectProperty ;
+                      rdfs:subPropertyOf :visualPrefer ;
+                      rdfs:domain :VisualStyle ;
+                      rdfs:range :Graphs .
+
+
+###  http://example.com#visualStyleHasIllustrations
+:visualStyleHasIllustrations rdf:type owl:ObjectProperty ;
+                             rdfs:subPropertyOf :visualPrefer ;
+                             rdfs:domain :VisualStyle ;
+                             rdfs:range :Illustrations .
+
+
+###  http://example.com#visualStyleHasMaps
+:visualStyleHasMaps rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf :visualPrefer ;
+                    rdfs:domain :VisualStyle ;
+                    rdfs:range :Maps .
+
+
+###  http://example.com#visualStyleHasMindMaps
+:visualStyleHasMindMaps rdf:type owl:ObjectProperty ;
+                        rdfs:subPropertyOf :visualPrefer ;
+                        rdfs:domain :VisualStyle ;
+                        rdfs:range :MindMaps .
+
+
+###  http://example.com#visualStyleHasOtherVisualElements
+:visualStyleHasOtherVisualElements rdf:type owl:ObjectProperty ;
+                                   rdfs:subPropertyOf :visualPrefer ;
+                                   rdfs:domain :VisualStyle ;
+                                   rdfs:range :OtherVisualElements .
+
+
+###  http://example.com#visualStyleHasVideos
+:visualStyleHasVideos rdf:type owl:ObjectProperty ;
+                      rdfs:subPropertyOf :visualPrefer ;
+                      rdfs:domain :VisualStyle ;
+                      rdfs:range :Videos .
+
+
+###  http://purl.org/nemo/gufo#inheresIn
+gufo:inheresIn rdf:type owl:ObjectProperty .
+
+
+###  http://purl.org/nemo/gufo#mediates
+gufo:mediates rdf:type owl:ObjectProperty .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://example.com#ClassRecording_1
+:ClassRecording_1 rdf:type owl:DatatypeProperty ;
+                  rdfs:subPropertyOf :preferAuralAuditive ;
+                  rdfs:domain :AuralLearning ;
+                  rdfs:label "Class recording"@en .
+
+
+###  http://example.com#Class_1
+:Class_1 rdf:type owl:DatatypeProperty ;
+         rdfs:subPropertyOf :preferAuralAuditive ;
+         rdfs:domain :AuralLearning ;
+         rdfs:label "Class"@en .
+
+
+###  http://example.com#Conversations_1
+:Conversations_1 rdf:type owl:DatatypeProperty ;
+                 rdfs:subPropertyOf :preferAuralAuditive ;
+                 rdfs:domain :AuralLearning ;
+                 rdfs:label "Conversations"@en .
+
+
+###  http://example.com#CreateDiagrams_1
+:CreateDiagrams_1 rdf:type owl:DatatypeProperty ;
+                  rdfs:subPropertyOf :preferReadWrite ;
+                  rdfs:domain :ReadWriteLearning ;
+                  rdfs:label "Create diagrams"@en .
+
+
+###  http://example.com#CreateList_1
+:CreateList_1 rdf:type owl:DatatypeProperty ;
+              rdfs:subPropertyOf :preferReadWrite ;
+              rdfs:domain :ReadWriteLearning ;
+              rdfs:label "Create list"@en .
+
+
+###  http://example.com#Demonstrations_1
+:Demonstrations_1 rdf:type owl:DatatypeProperty ;
+                  rdfs:subPropertyOf :preferVisual ;
+                  rdfs:domain :VisualLearning_1 ;
+                  rdfs:label "Demonstrations"@en .
+
+
+###  http://example.com#Diagrams_1
+:Diagrams_1 rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf :preferVisual ;
+            rdfs:domain :VisualLearning_1 ;
+            rdfs:label "Diagrams"@en .
+
+
+###  http://example.com#Discussions_1
+:Discussions_1 rdf:type owl:DatatypeProperty ;
+               rdfs:subPropertyOf :preferAuralAuditive ;
+               rdfs:domain :AuralLearning ;
+               rdfs:label "Discussions"@en .
+
+
+###  http://example.com#EducationalGames_1
+:EducationalGames_1 rdf:type owl:DatatypeProperty ;
+                    rdfs:subPropertyOf :preferKinesthetic ;
+                    rdfs:domain :KinestheticLearning ;
+                    rdfs:label "Educational games"@en .
+
+
+###  http://example.com#Experimenting_1
+:Experimenting_1 rdf:type owl:DatatypeProperty ;
+                 rdfs:subPropertyOf :preferKinesthetic ;
+                 rdfs:domain :KinestheticLearning ;
+                 rdfs:label "Experimenting"@en .
+
+
+###  http://example.com#Graphs_1
+:Graphs_1 rdf:type owl:DatatypeProperty ;
+          rdfs:subPropertyOf :preferVisual ;
+          rdfs:domain :VisualLearning_1 ;
+          rdfs:label "Graphs"@en .
+
+
+###  http://example.com#GroupWork_1
+:GroupWork_1 rdf:type owl:DatatypeProperty ;
+             rdfs:subPropertyOf :preferKinesthetic ;
+             rdfs:domain :KinestheticLearning ;
+             rdfs:label "Group work"@en .
+
+
+###  http://example.com#Illustrations_1
+:Illustrations_1 rdf:type owl:DatatypeProperty ;
+                 rdfs:subPropertyOf :preferVisual ;
+                 rdfs:domain :VisualLearning_1 ;
+                 rdfs:label "Illustrations"@en .
+
+
+###  http://example.com#Images_1
+:Images_1 rdf:type owl:DatatypeProperty ;
+          rdfs:subPropertyOf :preferVisual ;
+          rdfs:domain :VisualLearning_1 ;
+          rdfs:label "Images"@en .
+
+
+###  http://example.com#Lectures_1
+:Lectures_1 rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf :preferAuralAuditive ;
+            rdfs:domain :AuralLearning ;
+            rdfs:label "Lectures"@en .
+
+
+###  http://example.com#ListenAudiobooks
+:ListenAudiobooks rdf:type owl:DatatypeProperty ;
+                  rdfs:subPropertyOf :preferAuralAuditive ;
+                  rdfs:domain :AuralLearning ;
+                  rdfs:label "Listen audiobooks"@en .
+
+
+###  http://example.com#Making_1
+:Making_1 rdf:type owl:DatatypeProperty ;
+          rdfs:subPropertyOf :preferKinesthetic ;
+          rdfs:domain :KinestheticLearning ;
+          rdfs:label "Making"@en .
+
+
+###  http://example.com#Maps_1
+:Maps_1 rdf:type owl:DatatypeProperty ;
+        rdfs:subPropertyOf :preferVisual ;
+        rdfs:domain :VisualLearning_1 ;
+        rdfs:label "Maps"@en .
+
+
+###  http://example.com#MindMaps_1
+:MindMaps_1 rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf :preferVisual ;
+            rdfs:domain :VisualLearning_1 ;
+            rdfs:label "Mind maps"@en .
+
+
+###  http://example.com#Music_1
+:Music_1 rdf:type owl:DatatypeProperty ;
+         rdfs:subPropertyOf :preferAuralAuditive ;
+         rdfs:domain :AuralLearning ;
+         rdfs:label "Music"@en .
+
+
+###  http://example.com#ObjectManipulation_1
+:ObjectManipulation_1 rdf:type owl:DatatypeProperty ;
+                      rdfs:subPropertyOf :preferKinesthetic ;
+                      rdfs:domain :KinestheticLearning ;
+                      rdfs:label "Object manipulation"@en .
+
+
+###  http://example.com#OralPresentations_1
+:OralPresentations_1 rdf:type owl:DatatypeProperty ;
+                     rdfs:subPropertyOf :preferAuralAuditive ;
+                     rdfs:domain :AuralLearning ;
+                     rdfs:label "Oral presentations"@en .
+
+
+###  http://example.com#OtherVisualElements_1
+:OtherVisualElements_1 rdf:type owl:DatatypeProperty ;
+                       rdfs:subPropertyOf :preferVisual ;
+                       rdfs:domain :VisualLearning_1 ;
+                       rdfs:label "Other visual elements"@en .
+
+
+###  http://example.com#Podcasts
+:Podcasts rdf:type owl:DatatypeProperty ;
+          rdfs:subPropertyOf :preferAuralAuditive ;
+          rdfs:domain :AuralLearning ;
+          rdfs:label "Podcasts"@en .
+
+
+###  http://example.com#PracticalActivities_1
+:PracticalActivities_1 rdf:type owl:DatatypeProperty ;
+                       rdfs:subPropertyOf :preferKinesthetic ;
+                       rdfs:domain :KinestheticLearning ;
+                       rdfs:label "Practical activities"@en .
+
+
+###  http://example.com#ReadTexts_1
+:ReadTexts_1 rdf:type owl:DatatypeProperty ;
+             rdfs:subPropertyOf :preferReadWrite ;
+             rdfs:domain :ReadWriteLearning ;
+             rdfs:label "Read texts"@en .
+
+
+###  http://example.com#Recordings_1
+:Recordings_1 rdf:type owl:DatatypeProperty ;
+              rdfs:subPropertyOf :preferAuralAuditive ;
+              rdfs:domain :AuralLearning ;
+              rdfs:label "Recordings"@en .
+
+
+###  http://example.com#Simulations_1
+:Simulations_1 rdf:type owl:DatatypeProperty ;
+               rdfs:subPropertyOf :preferKinesthetic ;
+               rdfs:domain :KinestheticLearning ;
+               rdfs:label "Simulations"@en .
+
+
+###  http://example.com#Songs_1
+:Songs_1 rdf:type owl:DatatypeProperty ;
+         rdfs:subPropertyOf :preferAuralAuditive ;
+         rdfs:domain :AuralLearning ;
+         rdfs:label "Songs"@en .
+
+
+###  http://example.com#StudyGroup_1
+:StudyGroup_1 rdf:type owl:DatatypeProperty ;
+              rdfs:subPropertyOf :preferAuralAuditive ;
+              rdfs:domain :AuralLearning ;
+              rdfs:label "Study group"@en .
+
+
+###  http://example.com#SummarizeContent_1
+:SummarizeContent_1 rdf:type owl:DatatypeProperty ;
+                    rdfs:subPropertyOf :preferReadWrite ;
+                    rdfs:domain :ReadWriteLearning ;
+                    rdfs:label "Summarize content"@en .
+
+
+###  http://example.com#Videos_1
+:Videos_1 rdf:type owl:DatatypeProperty ;
+          rdfs:subPropertyOf :preferVisual ;
+          rdfs:domain :VisualLearning_1 ;
+          rdfs:label "Videos"@en .
+
+
+###  http://example.com#WriteNotes_1
+:WriteNotes_1 rdf:type owl:DatatypeProperty ;
+              rdfs:subPropertyOf :preferReadWrite ;
+              rdfs:domain :ReadWriteLearning ;
+              rdfs:label "Write notes"@en .
+
+
+###  http://example.com#preferAuralAuditive
+:preferAuralAuditive rdf:type owl:DatatypeProperty ;
+                     rdfs:subPropertyOf gufo:hasQualityValue .
+
+
+###  http://example.com#preferKinesthetic
+:preferKinesthetic rdf:type owl:DatatypeProperty ;
+                   rdfs:subPropertyOf gufo:hasQualityValue .
+
+
+###  http://example.com#preferReadWrite
+:preferReadWrite rdf:type owl:DatatypeProperty ;
+                 rdfs:subPropertyOf gufo:hasQualityValue .
+
+
+###  http://example.com#preferVisual
+:preferVisual rdf:type owl:DatatypeProperty ;
+              rdfs:subPropertyOf gufo:hasQualityValue .
+
+
+###  http://purl.org/nemo/gufo#hasQualityValue
+gufo:hasQualityValue rdf:type owl:DatatypeProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://example.com#Adult
+:Adult rdf:type owl:Class ;
+       rdfs:subClassOf :Learner .
+
+
+###  http://example.com#AuditoryLearningApplications
+:AuditoryLearningApplications rdf:type owl:Class ;
+                              rdfs:subClassOf :AuralAuditiveLearning .
+
+
+###  http://example.com#AugmentedAndVirtualRealityApplications
+:AugmentedAndVirtualRealityApplications rdf:type owl:Class ;
+                                        rdfs:subClassOf :KinestheticLearning_1 .
+
+
+###  http://example.com#AuralAuditiveLearning
+:AuralAuditiveLearning rdf:type owl:Class ;
+                       rdfs:subClassOf :Methodology .
+
+
+###  http://example.com#AuralAuditiveStyle
+:AuralAuditiveStyle rdf:type owl:Class ;
+                    rdfs:subClassOf :VARKModel ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty :preferAuralAuditive ;
+                                      owl:someValuesFrom owl:rational
+                                    ] .
+
+
+###  http://example.com#AuralLearning
+:AuralLearning rdf:type owl:Class ;
+               rdfs:subClassOf :Prefer .
+
+
+###  http://example.com#Class
+:Class rdf:type owl:Class ;
+       rdfs:subClassOf :AuralLearning .
+
+
+###  http://example.com#ClassRecording
+:ClassRecording rdf:type owl:Class ;
+                rdfs:subClassOf :AuralLearning .
+
+
+###  http://example.com#Classify
+:Classify rdf:type owl:Class ;
+          owl:equivalentClass [ owl:intersectionOf ( gufo:IntrinsicMode
+                                                     [ rdf:type owl:Restriction ;
+                                                       owl:onProperty gufo:inheresIn ;
+                                                       owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                       owl:onClass :Learner
+                                                     ]
+                                                   ) ;
+                                rdf:type owl:Class
+                              ] ;
+          rdfs:subClassOf gufo:IntrinsicMode .
+
+
+###  http://example.com#Conversations
+:Conversations rdf:type owl:Class ;
+               rdfs:subClassOf :AuralLearning .
+
+
+###  http://example.com#CreateDiagrams
+:CreateDiagrams rdf:type owl:Class ;
+                rdfs:subClassOf :ReadWriteLearning .
+
+
+###  http://example.com#CreateList
+:CreateList rdf:type owl:Class ;
+            rdfs:subClassOf :ReadWriteLearning .
+
+
+###  http://example.com#CreateMindMapsAndFlowcharts
+:CreateMindMapsAndFlowcharts rdf:type owl:Class ;
+                             rdfs:subClassOf :VisualLearning .
+
+
+###  http://example.com#Demonstrations
+:Demonstrations rdf:type owl:Class ;
+                rdfs:subClassOf :VisualLearning_1 .
+
+
+###  http://example.com#Diagrams
+:Diagrams rdf:type owl:Class ;
+          rdfs:subClassOf :VisualLearning_1 .
+
+
+###  http://example.com#Discussions
+:Discussions rdf:type owl:Class ;
+             rdfs:subClassOf :AuralLearning .
+
+
+###  http://example.com#DominantStyle
+:DominantStyle rdf:type owl:Class ;
+               rdfs:subClassOf :Classify ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :preferAuralAuditive ;
+                                 owl:minQualifiedCardinality "10"^^xsd:nonNegativeInteger ;
+                                 owl:onDataRange xsd:integer
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :preferKinesthetic ;
+                                 owl:minQualifiedCardinality "6"^^xsd:nonNegativeInteger ;
+                                 owl:onDataRange xsd:integer
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :preferReadWrite ;
+                                 owl:minQualifiedCardinality "4"^^xsd:nonNegativeInteger ;
+                                 owl:onDataRange xsd:integer
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :preferVisual ;
+                                 owl:minQualifiedCardinality "7"^^xsd:nonNegativeInteger ;
+                                 owl:onDataRange xsd:integer
+                               ] .
+
+
+###  http://example.com#EducationalGames
+:EducationalGames rdf:type owl:Class ;
+                  rdfs:subClassOf :KinestheticLearning .
+
+
+###  http://example.com#Educator
+:Educator rdf:type owl:Class ;
+          rdfs:subClassOf :Person_1 ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty gufo:mediates ;
+                            owl:someValuesFrom :Questionnarie
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :appliedMethodologyIn ;
+                            owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                            owl:onClass :Learner
+                          ] .
+
+
+###  http://example.com#EncouragePhysicalActivitiesAndSports
+:EncouragePhysicalActivitiesAndSports rdf:type owl:Class ;
+                                      rdfs:subClassOf :KinestheticLearning_1 .
+
+
+###  http://example.com#Experimenting
+:Experimenting rdf:type owl:Class ;
+               rdfs:subClassOf :KinestheticLearning .
+
+
+###  http://example.com#Graphs
+:Graphs rdf:type owl:Class ;
+        rdfs:subClassOf :VisualLearning_1 .
+
+
+###  http://example.com#GroupWork
+:GroupWork rdf:type owl:Class ;
+           rdfs:subClassOf :KinestheticLearning .
+
+
+###  http://example.com#IllustratedBooksAndEducationalMagazines
+:IllustratedBooksAndEducationalMagazines rdf:type owl:Class ;
+                                         rdfs:subClassOf :VisualLearning .
+
+
+###  http://example.com#Illustrations
+:Illustrations rdf:type owl:Class ;
+               rdfs:subClassOf :VisualLearning_1 .
+
+
+###  http://example.com#Images
+:Images rdf:type owl:Class ;
+        rdfs:subClassOf :VisualLearning_1 .
+
+
+###  http://example.com#KinestheticLearning
+:KinestheticLearning rdf:type owl:Class ;
+                     rdfs:subClassOf :Prefer .
+
+
+###  http://example.com#KinestheticLearning_1
+:KinestheticLearning_1 rdf:type owl:Class ;
+                       rdfs:subClassOf :Methodology .
+
+
+###  http://example.com#KinestheticStyle
+:KinestheticStyle rdf:type owl:Class ;
+                  rdfs:subClassOf :VARKModel ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty :preferKinesthetic ;
+                                    owl:someValuesFrom owl:rational
+                                  ] .
+
+
+###  http://example.com#LaboratoriesAndExperimentationRooms
+:LaboratoriesAndExperimentationRooms rdf:type owl:Class ;
+                                     rdfs:subClassOf :KinestheticLearning_1 .
+
+
+###  http://example.com#Learner
+:Learner rdf:type owl:Class ;
+         rdfs:subClassOf :Person_1 ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty :belongsTo ;
+                           owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                           owl:onClass :VARKModel
+                         ] ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty :methodologyAppliedTo ;
+                           owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                           owl:onClass :Methodology
+                         ] ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty :stylePrefer ;
+                           owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                           owl:onClass :Prefer
+                         ] ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty :varkModelHasClassify ;
+                           owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                           owl:onClass :Classify
+                         ] ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty [ owl:inverseOf gufo:inheresIn
+                                          ] ;
+                           owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                           owl:onClass :Classify
+                         ] .
+
+
+###  http://example.com#LearningStyle
+:LearningStyle rdf:type owl:Class ;
+               rdfs:subClassOf gufo:FunctionalComplex .
+
+
+###  http://example.com#LearningStyle_1
+:LearningStyle_1 rdf:type owl:Class ;
+                 rdfs:subClassOf gufo:Relator ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty :belongsTo ;
+                                   owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                   owl:onClass :VARKModel
+                                 ] .
+
+
+###  http://example.com#Lectures
+:Lectures rdf:type owl:Class ;
+          rdfs:subClassOf :AuralLearning .
+
+
+###  http://example.com#ListenAudio
+:ListenAudio rdf:type owl:Class ;
+             rdfs:subClassOf :AuralLearning .
+
+
+###  http://example.com#ListenPodcasts
+:ListenPodcasts rdf:type owl:Class ;
+                rdfs:subClassOf :AuralLearning .
+
+
+###  http://example.com#MakeListsAndCategorizeInformation
+:MakeListsAndCategorizeInformation rdf:type owl:Class ;
+                                   rdfs:subClassOf :ReadWriteLearning_1 .
+
+
+###  http://example.com#MakeProjectsAndBuildObjects
+:MakeProjectsAndBuildObjects rdf:type owl:Class ;
+                             rdfs:subClassOf :KinestheticLearning_1 .
+
+
+###  http://example.com#MakeRhymesAndSongsAboutTheSubject
+:MakeRhymesAndSongsAboutTheSubject rdf:type owl:Class ;
+                                   rdfs:subClassOf :AuralAuditiveLearning .
+
+
+###  http://example.com#MakeSketchesAndDrawings
+:MakeSketchesAndDrawings rdf:type owl:Class ;
+                         rdfs:subClassOf :VisualLearning .
+
+
+###  http://example.com#Making
+:Making rdf:type owl:Class ;
+        rdfs:subClassOf :KinestheticLearning .
+
+
+###  http://example.com#Maps
+:Maps rdf:type owl:Class ;
+      rdfs:subClassOf :VisualLearning_1 .
+
+
+###  http://example.com#Methodology
+:Methodology rdf:type owl:Class ;
+             owl:equivalentClass [ owl:intersectionOf ( gufo:FunctionalComplex
+                                                        [ rdf:type owl:Class ;
+                                                          owl:unionOf ( :AuralAuditiveLearning
+                                                                        :KinestheticLearning_1
+                                                                        :ReadWriteLearning_1
+                                                                        :VisualLearning
+                                                                      )
+                                                        ]
+                                                      ) ;
+                                   rdf:type owl:Class
+                                 ] ;
+             rdfs:subClassOf gufo:FunctionalComplex ;
+             owl:disjointWith :Prefer .
+
+
+###  http://example.com#MindMaps
+:MindMaps rdf:type owl:Class ;
+          rdfs:subClassOf :VisualLearning_1 .
+
+
+###  http://example.com#MultimodalStyle
+:MultimodalStyle rdf:type owl:Class ;
+                 rdfs:subClassOf :Classify ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty :preferAuralAuditive ;
+                                   owl:minQualifiedCardinality "4"^^xsd:nonNegativeInteger ;
+                                   owl:onDataRange xsd:integer
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty :preferKinesthetic ;
+                                   owl:minQualifiedCardinality "4"^^xsd:nonNegativeInteger ;
+                                   owl:onDataRange xsd:integer
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty :preferReadWrite ;
+                                   owl:minQualifiedCardinality "4"^^xsd:nonNegativeInteger ;
+                                   owl:onDataRange xsd:integer
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty :preferVisual ;
+                                   owl:minQualifiedCardinality "4"^^xsd:nonNegativeInteger ;
+                                   owl:onDataRange xsd:integer
+                                 ] .
+
+
+###  http://example.com#Music
+:Music rdf:type owl:Class ;
+       rdfs:subClassOf :AuralLearning .
+
+
+###  http://example.com#ObjectManipulation
+:ObjectManipulation rdf:type owl:Class ;
+                    rdfs:subClassOf :KinestheticLearning .
+
+
+###  http://example.com#OralPresentations
+:OralPresentations rdf:type owl:Class ;
+                   rdfs:subClassOf :AuralLearning .
+
+
+###  http://example.com#OtherVisualElements
+:OtherVisualElements rdf:type owl:Class ;
+                     rdfs:subClassOf :VisualLearning_1 .
+
+
+###  http://example.com#Person_1
+:Person_1 rdf:type owl:Class ;
+          rdfs:subClassOf gufo:FunctionalComplex .
+
+
+###  http://example.com#PracticalActivities
+:PracticalActivities rdf:type owl:Class ;
+                     rdfs:subClassOf :KinestheticLearning .
+
+
+###  http://example.com#Prefer
+:Prefer rdf:type owl:Class ;
+        owl:equivalentClass [ owl:intersectionOf ( gufo:FunctionalComplex
+                                                   [ rdf:type owl:Class ;
+                                                     owl:unionOf ( :AuralAuditiveStyle
+                                                                   :KinestheticStyle
+                                                                   :ReadWriteStyle
+                                                                   :VisualStyle
+                                                                 )
+                                                   ]
+                                                 ) ;
+                              rdf:type owl:Class
+                            ] .
+
+
+###  http://example.com#PrimaryStyle
+:PrimaryStyle rdf:type owl:Class ;
+              rdfs:subClassOf :Classify ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty :preferAuralAuditive ;
+                                owl:minQualifiedCardinality "8"^^xsd:nonNegativeInteger ;
+                                owl:onDataRange xsd:integer
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty :preferKinesthetic ;
+                                owl:minQualifiedCardinality "5"^^xsd:nonNegativeInteger ;
+                                owl:onDataRange xsd:integer
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty :preferReadWrite ;
+                                owl:minQualifiedCardinality "4"^^xsd:nonNegativeInteger ;
+                                owl:onDataRange xsd:integer
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty :preferVisual ;
+                                owl:minQualifiedCardinality "5"^^xsd:nonNegativeInteger ;
+                                owl:onDataRange xsd:integer
+                              ] .
+
+
+###  http://example.com#PromoteDebatesAndDiscussions
+:PromoteDebatesAndDiscussions rdf:type owl:Class ;
+                              rdfs:subClassOf :AuralAuditiveLearning .
+
+
+###  http://example.com#PromoteGroupDiscussions
+:PromoteGroupDiscussions rdf:type owl:Class ;
+                         rdfs:subClassOf :AuralAuditiveLearning .
+
+
+###  http://example.com#PromoteSensoryExperiences
+:PromoteSensoryExperiences rdf:type owl:Class ;
+                           rdfs:subClassOf :KinestheticLearning_1 .
+
+
+###  http://example.com#ProvideEducationalVideosAndAnimations
+:ProvideEducationalVideosAndAnimations rdf:type owl:Class ;
+                                       rdfs:subClassOf :VisualLearning .
+
+
+###  http://example.com#ProvideExperimentation
+:ProvideExperimentation rdf:type owl:Class ;
+                        rdfs:subClassOf :KinestheticLearning_1 .
+
+
+###  http://example.com#ProvideReviewAndEditing
+:ProvideReviewAndEditing rdf:type owl:Class ;
+                         rdfs:subClassOf :ReadWriteLearning_1 .
+
+
+###  http://example.com#ProvideTextsAndArticles
+:ProvideTextsAndArticles rdf:type owl:Class ;
+                         rdfs:subClassOf :ReadWriteLearning_1 .
+
+
+###  http://example.com#Questionnarie
+:Questionnarie rdf:type owl:Class ;
+               rdfs:subClassOf gufo:Relator ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty [ owl:inverseOf gufo:mediates
+                                                ] ;
+                                 owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                 owl:onClass :Educator
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty [ owl:inverseOf gufo:mediates
+                                                ] ;
+                                 owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                 owl:onClass :Learner
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty [ owl:inverseOf gufo:mediates
+                                                ] ;
+                                 owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                 owl:onClass :LearningStyle
+                               ] .
+
+
+###  http://example.com#ReadTexts
+:ReadTexts rdf:type owl:Class ;
+           rdfs:subClassOf :ReadWriteLearning .
+
+
+###  http://example.com#ReadWriteLearning
+:ReadWriteLearning rdf:type owl:Class ;
+                   rdfs:subClassOf :Prefer .
+
+
+###  http://example.com#ReadWriteLearning_1
+:ReadWriteLearning_1 rdf:type owl:Class ;
+                     rdfs:subClassOf :Methodology .
+
+
+###  http://example.com#ReadWriteStyle
+:ReadWriteStyle rdf:type owl:Class ;
+                rdfs:subClassOf :VARKModel ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty :preferReadWrite ;
+                                  owl:someValuesFrom owl:rational
+                                ] .
+
+
+###  http://example.com#ReadingAndWritingApplications
+:ReadingAndWritingApplications rdf:type owl:Class ;
+                               rdfs:subClassOf :ReadWriteLearning_1 .
+
+
+###  http://example.com#Recordings
+:Recordings rdf:type owl:Class ;
+            rdfs:subClassOf :AuralLearning .
+
+
+###  http://example.com#RepeatImportantInformation
+:RepeatImportantInformation rdf:type owl:Class ;
+                            rdfs:subClassOf :AuralAuditiveLearning .
+
+
+###  http://example.com#SecondaryStyle
+:SecondaryStyle rdf:type owl:Class ;
+                rdfs:subClassOf :Classify ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty :preferAuralAuditive ;
+                                  owl:minQualifiedCardinality "6"^^xsd:nonNegativeInteger ;
+                                  owl:onDataRange xsd:integer
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty :preferKinesthetic ;
+                                  owl:minQualifiedCardinality "4"^^xsd:nonNegativeInteger ;
+                                  owl:onDataRange xsd:integer
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty :preferReadWrite ;
+                                  owl:minQualifiedCardinality "4"^^xsd:nonNegativeInteger ;
+                                  owl:onDataRange xsd:integer
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty :preferVisual ;
+                                  owl:minQualifiedCardinality "4"^^xsd:nonNegativeInteger ;
+                                  owl:onDataRange xsd:integer
+                                ] .
+
+
+###  http://example.com#SensorialLearning
+:SensorialLearning rdf:type owl:Class ;
+                   rdfs:subClassOf :LearningStyle .
+
+
+###  http://example.com#Simulations
+:Simulations rdf:type owl:Class ;
+             rdfs:subClassOf :KinestheticLearning .
+
+
+###  http://example.com#Songs
+:Songs rdf:type owl:Class ;
+       rdfs:subClassOf :AuralLearning .
+
+
+###  http://example.com#StudyGroup
+:StudyGroup rdf:type owl:Class ;
+            rdfs:subClassOf :AuralLearning .
+
+
+###  http://example.com#SummarizeContent
+:SummarizeContent rdf:type owl:Class ;
+                  rdfs:subClassOf :ReadWriteLearning .
+
+
+###  http://example.com#TeachingMethodology
+:TeachingMethodology rdf:type owl:Class ;
+                     rdfs:subClassOf gufo:Relator ,
+                                     [ rdf:type owl:Restriction ;
+                                       owl:onProperty :belongsTo ;
+                                       owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                       owl:onClass :Methodology
+                                     ] .
+
+
+###  http://example.com#Teenage
+:Teenage rdf:type owl:Class ;
+         rdfs:subClassOf :Learner .
+
+
+###  http://example.com#UseColorsAndSymbols
+:UseColorsAndSymbols rdf:type owl:Class ;
+                     rdfs:subClassOf :VisualLearning .
+
+
+###  http://example.com#UseDiagramsAndConceptMaps
+:UseDiagramsAndConceptMaps rdf:type owl:Class ;
+                           rdfs:subClassOf :ReadWriteLearning_1 .
+
+
+###  http://example.com#UseImagesAndDiagrams
+:UseImagesAndDiagrams rdf:type owl:Class ;
+                      rdfs:subClassOf :VisualLearning .
+
+
+###  http://example.com#UseModelsAndPrototypes
+:UseModelsAndPrototypes rdf:type owl:Class ;
+                        rdfs:subClassOf :KinestheticLearning_1 .
+
+
+###  http://example.com#UseOfListeningResourcesSuchAsPodcastsAndAudiobooks
+:UseOfListeningResourcesSuchAsPodcastsAndAudiobooks rdf:type owl:Class ;
+                                                    rdfs:subClassOf :AuralAuditiveLearning .
+
+
+###  http://example.com#UseSongsAndRhymes
+:UseSongsAndRhymes rdf:type owl:Class ;
+                   rdfs:subClassOf :AuralAuditiveLearning .
+
+
+###  http://example.com#VARKModel
+:VARKModel rdf:type owl:Class ;
+           owl:equivalentClass [ owl:intersectionOf ( :SensorialLearning
+                                                      [ rdf:type owl:Class ;
+                                                        owl:unionOf ( :DominantStyle
+                                                                      :MultimodalStyle
+                                                                      :PrimaryStyle
+                                                                      :SecondaryStyle
+                                                                    )
+                                                      ]
+                                                    ) ;
+                                 rdf:type owl:Class
+                               ] .
+
+
+###  http://example.com#Videos
+:Videos rdf:type owl:Class ;
+        rdfs:subClassOf :VisualLearning_1 .
+
+
+###  http://example.com#VisualLearning
+:VisualLearning rdf:type owl:Class ;
+                rdfs:subClassOf :Methodology .
+
+
+###  http://example.com#VisualLearningApplications
+:VisualLearningApplications rdf:type owl:Class ;
+                            rdfs:subClassOf :VisualLearning .
+
+
+###  http://example.com#VisualLearning_1
+:VisualLearning_1 rdf:type owl:Class ;
+                  rdfs:subClassOf :Prefer .
+
+
+###  http://example.com#VisualStyle
+:VisualStyle rdf:type owl:Class ;
+             rdfs:subClassOf :VARKModel ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :preferVisual ;
+                               owl:someValuesFrom owl:rational
+                             ] .
+
+
+###  http://example.com#WriteNotes
+:WriteNotes rdf:type owl:Class ;
+            rdfs:subClassOf :ReadWriteLearning .
+
+
+###  http://example.com#WritingActivities
+:WritingActivities rdf:type owl:Class ;
+                   rdfs:subClassOf :ReadWriteLearning_1 .
+
+
+###  http://purl.org/nemo/gufo#Category
+gufo:Category rdf:type owl:Class .
+
+
+###  http://purl.org/nemo/gufo#FunctionalComplex
+gufo:FunctionalComplex rdf:type owl:Class .
+
+
+###  http://purl.org/nemo/gufo#IntrinsicMode
+gufo:IntrinsicMode rdf:type owl:Class .
+
+
+###  http://purl.org/nemo/gufo#Kind
+gufo:Kind rdf:type owl:Class .
+
+
+###  http://purl.org/nemo/gufo#MaterialRelationshipType
+gufo:MaterialRelationshipType rdf:type owl:Class .
+
+
+###  http://purl.org/nemo/gufo#Mixin
+gufo:Mixin rdf:type owl:Class .
+
+
+###  http://purl.org/nemo/gufo#Phase
+gufo:Phase rdf:type owl:Class .
+
+
+###  http://purl.org/nemo/gufo#Relator
+gufo:Relator rdf:type owl:Class .
+
+
+###  http://purl.org/nemo/gufo#Role
+gufo:Role rdf:type owl:Class .
+
+
+###  http://purl.org/nemo/gufo#SubKind
+gufo:SubKind rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://example.com#Adult
+:Adult rdf:type owl:NamedIndividual ,
+                gufo:Phase .
+
+
+###  http://example.com#AuditoryLearningApplications
+:AuditoryLearningApplications rdf:type owl:NamedIndividual .
+
+
+###  http://example.com#AugmentedAndVirtualRealityApplications
+:AugmentedAndVirtualRealityApplications rdf:type owl:NamedIndividual .
+
+
+###  http://example.com#AuralAuditiveLearning
+:AuralAuditiveLearning rdf:type owl:NamedIndividual ,
+                                gufo:Category .
+
+
+###  http://example.com#AuralAuditiveStyle
+:AuralAuditiveStyle rdf:type owl:NamedIndividual ,
+                             gufo:Category .
+
+
+###  http://example.com#AuralLearning
+:AuralLearning rdf:type owl:NamedIndividual ,
+                        gufo:Kind .
+
+
+###  http://example.com#Class
+:Class rdf:type owl:NamedIndividual .
+
+
+###  http://example.com#ClassRecording
+:ClassRecording rdf:type owl:NamedIndividual .
+
+
+###  http://example.com#Classify
+:Classify rdf:type owl:NamedIndividual ,
+                   gufo:Kind ,
+                   gufo:Mixin .
+
+
+###  http://example.com#Conversations
+:Conversations rdf:type owl:NamedIndividual .
+
+
+###  http://example.com#CreateDiagrams
+:CreateDiagrams rdf:type owl:NamedIndividual .
+
+
+###  http://example.com#CreateList
+:CreateList rdf:type owl:NamedIndividual .
+
+
+###  http://example.com#CreateMindMapsAndFlowcharts
+:CreateMindMapsAndFlowcharts rdf:type owl:NamedIndividual .
+
+
+###  http://example.com#Demonstrations
+:Demonstrations rdf:type owl:NamedIndividual .
+
+
+###  http://example.com#Diagrams
+:Diagrams rdf:type owl:NamedIndividual .
+
+
+###  http://example.com#Discussions
+:Discussions rdf:type owl:NamedIndividual .
+
+
+###  http://example.com#DominantStyle
+:DominantStyle rdf:type owl:NamedIndividual ,
+                        :Classify ,
+                        gufo:SubKind .
+
+
+###  http://example.com#EducationalGames
+:EducationalGames rdf:type owl:NamedIndividual .
+
+
+###  http://example.com#Educator
+:Educator rdf:type owl:NamedIndividual ,
+                   gufo:Role .
+
+
+###  http://example.com#EncouragePhysicalActivitiesAndSports
+:EncouragePhysicalActivitiesAndSports rdf:type owl:NamedIndividual .
+
+
+###  http://example.com#Experimenting
+:Experimenting rdf:type owl:NamedIndividual .
+
+
+###  http://example.com#Graphs
+:Graphs rdf:type owl:NamedIndividual .
+
+
+###  http://example.com#GroupWork
+:GroupWork rdf:type owl:NamedIndividual .
+
+
+###  http://example.com#IllustratedBooksAndEducationalMagazines
+:IllustratedBooksAndEducationalMagazines rdf:type owl:NamedIndividual .
+
+
+###  http://example.com#Illustrations
+:Illustrations rdf:type owl:NamedIndividual .
+
+
+###  http://example.com#Images
+:Images rdf:type owl:NamedIndividual .
+
+
+###  http://example.com#KinestheticLearning
+:KinestheticLearning rdf:type owl:NamedIndividual ,
+                              gufo:Kind .
+
+
+###  http://example.com#KinestheticLearning_1
+:KinestheticLearning_1 rdf:type owl:NamedIndividual ,
+                                gufo:Category .
+
+
+###  http://example.com#KinestheticStyle
+:KinestheticStyle rdf:type owl:NamedIndividual ,
+                           gufo:Category .
+
+
+###  http://example.com#LaboratoriesAndExperimentationRooms
+:LaboratoriesAndExperimentationRooms rdf:type owl:NamedIndividual .
+
+
+###  http://example.com#Learner
+:Learner rdf:type owl:NamedIndividual ,
+                  gufo:Role .
+
+
+###  http://example.com#LearningStyle
+:LearningStyle rdf:type owl:NamedIndividual ,
+                        gufo:Mixin .
+
+
+###  http://example.com#LearningStyle_1
+:LearningStyle_1 rdf:type owl:NamedIndividual ,
+                          gufo:Kind .
+
+
+###  http://example.com#Lectures
+:Lectures rdf:type owl:NamedIndividual .
+
+
+###  http://example.com#ListenAudio
+:ListenAudio rdf:type owl:NamedIndividual .
+
+
+###  http://example.com#ListenPodcasts
+:ListenPodcasts rdf:type owl:NamedIndividual .
+
+
+###  http://example.com#MakeListsAndCategorizeInformation
+:MakeListsAndCategorizeInformation rdf:type owl:NamedIndividual .
+
+
+###  http://example.com#MakeProjectsAndBuildObjects
+:MakeProjectsAndBuildObjects rdf:type owl:NamedIndividual .
+
+
+###  http://example.com#MakeRhymesAndSongsAboutTheSubject
+:MakeRhymesAndSongsAboutTheSubject rdf:type owl:NamedIndividual .
+
+
+###  http://example.com#MakeSketchesAndDrawings
+:MakeSketchesAndDrawings rdf:type owl:NamedIndividual .
+
+
+###  http://example.com#Making
+:Making rdf:type owl:NamedIndividual .
+
+
+###  http://example.com#Maps
+:Maps rdf:type owl:NamedIndividual .
+
+
+###  http://example.com#Methodology
+:Methodology rdf:type owl:NamedIndividual ,
+                      gufo:Mixin .
+
+
+###  http://example.com#MindMaps
+:MindMaps rdf:type owl:NamedIndividual .
+
+
+###  http://example.com#MultimodalStyle
+:MultimodalStyle rdf:type owl:NamedIndividual ,
+                          :Classify ,
+                          gufo:SubKind .
+
+
+###  http://example.com#Music
+:Music rdf:type owl:NamedIndividual .
+
+
+###  http://example.com#ObjectManipulation
+:ObjectManipulation rdf:type owl:NamedIndividual .
+
+
+###  http://example.com#OralPresentations
+:OralPresentations rdf:type owl:NamedIndividual .
+
+
+###  http://example.com#OtherVisualElements
+:OtherVisualElements rdf:type owl:NamedIndividual .
+
+
+###  http://example.com#Person
+:Person rdf:type owl:NamedIndividual .
+
+
+###  http://example.com#Person_1
+:Person_1 rdf:type owl:NamedIndividual ,
+                   gufo:Kind .
+
+
+###  http://example.com#PracticalActivities
+:PracticalActivities rdf:type owl:NamedIndividual .
+
+
+###  http://example.com#Prefer
+:Prefer rdf:type owl:NamedIndividual ,
+                 gufo:Mixin .
+
+
+###  http://example.com#PrimaryStyle
+:PrimaryStyle rdf:type owl:NamedIndividual ,
+                       :Classify ,
+                       gufo:SubKind .
+
+
+###  http://example.com#PromoteDebatesAndDiscussions
+:PromoteDebatesAndDiscussions rdf:type owl:NamedIndividual .
+
+
+###  http://example.com#PromoteGroupDiscussions
+:PromoteGroupDiscussions rdf:type owl:NamedIndividual .
+
+
+###  http://example.com#PromoteSensoryExperiences
+:PromoteSensoryExperiences rdf:type owl:NamedIndividual .
+
+
+###  http://example.com#ProvideEducationalVideosAndAnimations
+:ProvideEducationalVideosAndAnimations rdf:type owl:NamedIndividual .
+
+
+###  http://example.com#ProvideExperimentation
+:ProvideExperimentation rdf:type owl:NamedIndividual .
+
+
+###  http://example.com#ProvideReviewAndEditing
+:ProvideReviewAndEditing rdf:type owl:NamedIndividual .
+
+
+###  http://example.com#ProvideTextsAndArticles
+:ProvideTextsAndArticles rdf:type owl:NamedIndividual .
+
+
+###  http://example.com#Questionnarie
+:Questionnarie rdf:type owl:NamedIndividual ,
+                        gufo:Kind .
+
+
+###  http://example.com#ReadTexts
+:ReadTexts rdf:type owl:NamedIndividual .
+
+
+###  http://example.com#ReadWriteLearning
+:ReadWriteLearning rdf:type owl:NamedIndividual ,
+                            gufo:Kind .
+
+
+###  http://example.com#ReadWriteLearning_1
+:ReadWriteLearning_1 rdf:type owl:NamedIndividual ,
+                              gufo:Category .
+
+
+###  http://example.com#ReadWriteStyle
+:ReadWriteStyle rdf:type owl:NamedIndividual ,
+                         gufo:Category .
+
+
+###  http://example.com#ReadingAndWritingApplications
+:ReadingAndWritingApplications rdf:type owl:NamedIndividual .
+
+
+###  http://example.com#Recordings
+:Recordings rdf:type owl:NamedIndividual .
+
+
+###  http://example.com#RepeatImportantInformation
+:RepeatImportantInformation rdf:type owl:NamedIndividual .
+
+
+###  http://example.com#SecondaryStyle
+:SecondaryStyle rdf:type owl:NamedIndividual ,
+                         :Classify ,
+                         gufo:SubKind .
+
+
+###  http://example.com#SensorialLearning
+:SensorialLearning rdf:type owl:NamedIndividual ,
+                            gufo:Category .
+
+
+###  http://example.com#Simulations
+:Simulations rdf:type owl:NamedIndividual .
+
+
+###  http://example.com#Songs
+:Songs rdf:type owl:NamedIndividual .
+
+
+###  http://example.com#StudyGroup
+:StudyGroup rdf:type owl:NamedIndividual .
+
+
+###  http://example.com#SummarizeContent
+:SummarizeContent rdf:type owl:NamedIndividual .
+
+
+###  http://example.com#TeachingMethodology
+:TeachingMethodology rdf:type owl:NamedIndividual ,
+                              gufo:Mixin .
+
+
+###  http://example.com#Teenage
+:Teenage rdf:type owl:NamedIndividual ,
+                  gufo:Phase .
+
+
+###  http://example.com#UseColorsAndSymbols
+:UseColorsAndSymbols rdf:type owl:NamedIndividual .
+
+
+###  http://example.com#UseDiagramsAndConceptMaps
+:UseDiagramsAndConceptMaps rdf:type owl:NamedIndividual .
+
+
+###  http://example.com#UseImagesAndDiagrams
+:UseImagesAndDiagrams rdf:type owl:NamedIndividual .
+
+
+###  http://example.com#UseModelsAndPrototypes
+:UseModelsAndPrototypes rdf:type owl:NamedIndividual .
+
+
+###  http://example.com#UseOfListeningResourcesSuchAsPodcastsAndAudiobooks
+:UseOfListeningResourcesSuchAsPodcastsAndAudiobooks rdf:type owl:NamedIndividual .
+
+
+###  http://example.com#UseSongsAndRhymes
+:UseSongsAndRhymes rdf:type owl:NamedIndividual .
+
+
+###  http://example.com#VARKModel
+:VARKModel rdf:type owl:NamedIndividual ,
+                    gufo:Kind ,
+                    gufo:Mixin .
+
+
+###  http://example.com#Videos
+:Videos rdf:type owl:NamedIndividual .
+
+
+###  http://example.com#VisualLearning
+:VisualLearning rdf:type owl:NamedIndividual ,
+                         gufo:Category .
+
+
+###  http://example.com#VisualLearningApplications
+:VisualLearningApplications rdf:type owl:NamedIndividual .
+
+
+###  http://example.com#VisualLearning_1
+:VisualLearning_1 rdf:type owl:NamedIndividual ,
+                           gufo:Kind .
+
+
+###  http://example.com#VisualStyle
+:VisualStyle rdf:type owl:NamedIndividual ,
+                      gufo:Category .
+
+
+###  http://example.com#WriteNotes
+:WriteNotes rdf:type owl:NamedIndividual .
+
+
+###  http://example.com#WritingActivities
+:WritingActivities rdf:type owl:NamedIndividual .
+
+
+###  http://example.com#appliedMethodologyIn
+:appliedMethodologyIn rdf:type owl:NamedIndividual ,
+                               gufo:MaterialRelationshipType .
+
+
+###  http://example.com#belongsTo
+:belongsTo rdf:type owl:NamedIndividual ,
+                    gufo:MaterialRelationshipType .
+
+
+###  http://example.com#methodologyAppliedTo
+:methodologyAppliedTo rdf:type owl:NamedIndividual ,
+                               gufo:MaterialRelationshipType .
+
+
+#################################################################
+#    Annotations
+#################################################################
+
+:Adult rdfs:label "Adult"@en .
+
+
+:AuditoryLearningApplications rdfs:label "Auditory learning applications"@en .
+
+
+:AugmentedAndVirtualRealityApplications rdfs:label "Augmented and virtual reality applications."@en .
+
+
+:AuralAuditiveLearning rdfs:comment """Auditory learners absorb information best when it is delivered through conversations, discussions, oral presentations, podcasts, and recordings.
+For them, learning is optimized when they engage in discussions, listen to explanations, and participate in activities that involve verbal communication."""@en ;
+                       rdfs:label "Aural-Auditive Learning"@en .
+
+
+:AuralAuditiveStyle rdfs:label "Aural-Auditive style"@en .
+
+
+:AuralLearning rdfs:label "Aural learning"@en .
+
+
+:Class rdfs:label "Class"@en .
+
+
+:ClassRecording rdfs:label "Class recording"@en .
+
+
+:Classify rdfs:label "Classify"@en .
+
+
+:Conversations rdfs:label "Conversations"@en .
+
+
+:CreateDiagrams rdfs:label "Create diagrams"@en .
+
+
+:CreateList rdfs:label "Create list"@en .
+
+
+:CreateMindMapsAndFlowcharts rdfs:comment "Encourage the creation of mind maps and flowcharts."@en ;
+                             rdfs:label "Create mind maps and flowcharts"@en .
+
+
+:Demonstrations rdfs:label "Demonstrations"@en .
+
+
+:Diagrams rdfs:label "Diagrams"@en .
+
+
+:Discussions rdfs:label "Discussions"@en .
+
+
+:DominantStyle rdfs:label "Dominant style"@en .
+
+
+:EducationalGames rdfs:label "Educational games"@en .
+
+
+:Educator rdfs:label "Educator"@en .
+
+
+:EncouragePhysicalActivitiesAndSports rdfs:label "Encourage physical activities and sports"@en .
+
+
+:Experimenting rdfs:label "Experimenting"@en .
+
+
+:Graphs rdfs:label "Graphs"@en .
+
+
+:GroupWork rdfs:label "Group work"@en .
+
+
+:IllustratedBooksAndEducationalMagazines rdfs:label "Illustrated books and educational magazines"@en .
+
+
+:Illustrations rdfs:label "Illustrations"@en .
+
+
+:Images rdfs:label "Images"@en .
+
+
+:KinestheticLearning rdfs:label "Kinesthetic learning"@en .
+
+
+:KinestheticLearning_1 rdfs:label "Kinesthetic Learning"@en .
+
+
+:KinestheticStyle rdfs:label "Kinesthetic style"@en .
+
+
+:LaboratoriesAndExperimentationRooms rdfs:label "Laboratories and experimentation rooms."@en .
+
+
+:Learner rdfs:label "Learner"@en .
+
+
+:LearningStyle rdfs:label "Learning Style"@en .
+
+
+:LearningStyle_1 rdfs:label "Learning style"@en .
+
+
+:Lectures rdfs:label "Lectures"@en .
+
+
+:ListenAudio rdfs:label "Listen audio"@en .
+
+
+:ListenPodcasts rdfs:label "Listen podcasts"@en .
+
+
+:MakeListsAndCategorizeInformation rdfs:label "Make lists and categorize information."@en .
+
+
+:MakeProjectsAndBuildObjects rdfs:comment "Provide materials and equipment for projects."@en ;
+                             rdfs:label "Make projects and build objects"@en .
+
+
+:MakeRhymesAndSongsAboutTheSubject rdfs:comment "Turn complex information into songs or rhymes to make it easier to remember."@en ;
+                                   rdfs:label "Make rhymes and songs about the subject"@en .
+
+
+:MakeSketchesAndDrawings rdfs:comment "Make sketches and drawings to reinforce learning."@en ;
+                         rdfs:label "Make sketches and drawings"@en .
+
+
+:Making rdfs:label "Making"@en .
+
+
+:Maps rdfs:label "Maps"@en .
+
+
+:MindMaps rdfs:label "Mind maps"@en .
+
+
+:MultimodalStyle rdfs:label "Multimodal style"@en .
+
+
+:Music rdfs:label "Music"@en .
+
+
+:ObjectManipulation rdfs:label "Object manipulation"@en .
+
+
+:OralPresentations rdfs:label "Oral presentations"@en .
+
+
+:OtherVisualElements rdfs:label "Other visual elements"@en .
+
+
+:Person_1 rdfs:label "Person"@en .
+
+
+:PracticalActivities rdfs:label "Practical activities"@en .
+
+
+:Prefer rdfs:label "Prefer"@en .
+
+
+:PrimaryStyle rdfs:label "Primary style"@en .
+
+
+:PromoteDebatesAndDiscussions rdfs:comment """Get them to actively participate in group discussions to share their ideas and hear others.
+Retention through discussion: Auditory learners tend to retain information by listening to explanations and discussions about the content. They may remember better what they heard in a lecture or discussion, rather than information they read or saw.
+Good auditory memory: Auditory learners can recall specific details of conversations, such as names, dates, and spoken information."""@en ;
+                              rdfs:label "Promote Debates and Discussions"@en .
+
+
+:PromoteGroupDiscussions rdfs:comment """Promote discussion of topics with colleagues to exchange ideas and deepen knowledge.
+Participating in Discussions and Debates: Auditory learners can benefit from group activities where they have the chance to talk about the topic and exchange views. Discussing and listening to different perspectives makes it easier to retain and deepen understanding.
+Study with Someone to Explain Concepts Orally: Explaining a concept out loud to someone else, or even “teaching” the content to yourself, is an effective technique. This allows them to organize their ideas logically and reinforce understanding."""@en ;
+                         rdfs:label "Promote group discussions"@en .
+
+
+:PromoteSensoryExperiences rdfs:comment "Associate concepts with sensory experiences"@en ;
+                           rdfs:label "Promote sensory experiences"@en .
+
+
+:ProvideEducationalVideosAndAnimations rdfs:label "Provide educational videos and animations"@en .
+
+
+:ProvideExperimentation rdfs:comment "Provide opportunities for experimentation and simulations."@en ;
+                        rdfs:label "Provide experimentation."@en .
+
+
+:ProvideReviewAndEditing rdfs:comment "Provide opportunities for review and editing."@en ;
+                         rdfs:label "Provide review and editing"@en .
+
+
+:ProvideTextsAndArticles rdfs:comment "Provide texts and articles related to the topic."@en ;
+                         rdfs:label "Provide texts and articles"@en .
+
+
+:Questionnarie rdfs:label "Questionnarie"@en .
+
+
+:ReadTexts rdfs:label "Read texts"@en .
+
+
+:ReadWriteLearning rdfs:label "Read/Write learning"@en .
+
+
+:ReadWriteLearning_1 rdfs:label "Read/Write Learning"@en .
+
+
+:ReadWriteStyle rdfs:label "Read/Write style"@en .
+
+
+:ReadingAndWritingApplications rdfs:label "Reading and Writing Applications"@en .
+
+
+:Recordings rdfs:label "Recordings"@en .
+
+
+:RepeatImportantInformation rdfs:comment """Have them explain the content to themselves: By explaining the content out loud, they consolidate the learning.
+Study aloud: Encourage them to read the material aloud to retain the content. Reading content aloud can help the auditory learner process information more effectively, as it involves both speaking and listening, making it easier to create mental associations.
+Aptitude for oral summaries: In review situations, it is common for them to prefer to explain what they have learned out loud, repeating or discussing the content to consolidate understanding."""@en ;
+                            rdfs:label "Repeat important information"@en .
+
+
+:SecondaryStyle rdfs:label "Secondary style"@en .
+
+
+:SensorialLearning rdfs:label "Sensorial learning"@en .
+
+
+:Simulations rdfs:label "Simulations"@en .
+
+
+:Songs rdfs:label "Songs"@en .
+
+
+:StudyGroup rdfs:label "Study group"@en .
+
+
+:SummarizeContent rdfs:label "Summarize content"@en .
+
+
+:TeachingMethodology rdfs:label "Teaching methodology"@en .
+
+
+:Teenage rdfs:label "Teenage"@en .
+
+
+:UseColorsAndSymbols rdfs:comment "Use colors and symbols to highlight important information."@en ;
+                     rdfs:label "Use colors and symbols"@en .
+
+
+:UseDiagramsAndConceptMaps rdfs:label "Use diagrams and concept maps."@en .
+
+
+:UseImagesAndDiagrams rdfs:comment "Use pictures and diagrams to illustrate concepts."@en ;
+                      rdfs:label "Use images and diagrams"@en .
+
+
+:UseModelsAndPrototypes rdfs:comment "Use models and prototypes to illustrate concepts"@en ;
+                        rdfs:label "Use models and prototypes"@en .
+
+
+:UseOfListeningResourcesSuchAsPodcastsAndAudiobooks rdfs:comment """They prefer expository classes, where they can listen to the teacher's explanations.
+Use of Auditory Resources, such as Podcasts and Audiobooks: By listening to educational materials in audio format, auditory learners are able to grasp the content without being distracted by visual information. Audiobooks, podcasts, recorded lectures, and even educational music are very useful resources for them.
+Lecture Recordings and Spoken Notes: Listening back to lecture or lecture recordings is helpful for these learners. Also, encourage them to record their own notes so they can listen to them later.
+Preference for narratives: They enjoy hearing stories, examples, and detailed descriptions. This helps structure knowledge in a cohesive and chronological way.
+Use flashcards with recordings: Record the questions and answers on flashcards for them to review the content."""@en ;
+                                                    rdfs:label "Use of listening resources such as Podcasts and Audiobooks"@en .
+
+
+:UseSongsAndRhymes rdfs:comment """Use songs and rhymes to help them memorize information.
+Turn complex information into songs or rhymes to make it easier to remember.
+Make associations of concepts with sounds or music."""@en ;
+                   rdfs:label "Use songs and rhymes"@en .
+
+
+:VARKModel rdfs:label "VARK model"@en .
+
+
+:Videos rdfs:label "Videos"@en .
+
+
+:VisualLearning rdfs:label "Visual Learning"@en .
+
+
+:VisualLearningApplications rdfs:label "Visual learning applications"@en .
+
+
+:VisualLearning_1 rdfs:label "Visual learning"@en .
+
+
+:VisualStyle rdfs:label "Visual style"@en .
+
+
+:WriteNotes rdfs:label "Write notes"@en .
+
+
+:WritingActivities rdfs:comment "Encourage writing summaries and notes."@en ;
+                   rdfs:label "Writing activities"@en .
+
+
+:appliedMethodologyIn rdfs:label "applied methodology in"@en .
+
+
+:belongsTo rdfs:label "/belongs-to"@en .
+
+
+:methodologyAppliedTo rdfs:label "/methodology applied to"@en .
+
+
+#################################################################
+#    General axioms
+#################################################################
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :AuditoryLearningApplications
+                :MakeRhymesAndSongsAboutTheSubject
+                :PromoteDebatesAndDiscussions
+                :PromoteGroupDiscussions
+                :RepeatImportantInformation
+                :UseOfListeningResourcesSuchAsPodcastsAndAudiobooks
+                :UseSongsAndRhymes
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :AugmentedAndVirtualRealityApplications
+                :EncouragePhysicalActivitiesAndSports
+                :LaboratoriesAndExperimentationRooms
+                :MakeProjectsAndBuildObjects
+                :PromoteSensoryExperiences
+                :ProvideExperimentation
+                :UseModelsAndPrototypes
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :AuralLearning
+                :KinestheticLearning
+                :ReadWriteLearning
+                :VisualLearning_1
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :Class
+                :ClassRecording
+                :Conversations
+                :Discussions
+                :Lectures
+                :ListenAudio
+                :ListenPodcasts
+                :Music
+                :OralPresentations
+                :Recordings
+                :Songs
+                :StudyGroup
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :CreateDiagrams
+                :CreateList
+                :ReadTexts
+                :SummarizeContent
+                :WriteNotes
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :CreateMindMapsAndFlowcharts
+                :IllustratedBooksAndEducationalMagazines
+                :MakeSketchesAndDrawings
+                :ProvideEducationalVideosAndAnimations
+                :UseColorsAndSymbols
+                :UseImagesAndDiagrams
+                :VisualLearningApplications
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :Demonstrations
+                :Diagrams
+                :Graphs
+                :Illustrations
+                :Images
+                :Maps
+                :MindMaps
+                :OtherVisualElements
+                :Videos
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :EducationalGames
+                :Experimenting
+                :GroupWork
+                :Making
+                :ObjectManipulation
+                :PracticalActivities
+                :Simulations
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :LearningStyle_1
+                :Questionnarie
+                :TeachingMethodology
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :MakeListsAndCategorizeInformation
+                :ProvideReviewAndEditing
+                :ProvideTextsAndArticles
+                :ReadingAndWritingApplications
+                :UseDiagramsAndConceptMaps
+                :WritingActivities
+              )
+] .
+
+
+###  Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi
