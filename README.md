@@ -6,7 +6,7 @@ Este trabalho tem com proposito apresentar uma proposta de **ontologia** do **mo
 
 Este trabalho fora elaborado pelo mestrando David Franklin, como forma de obtenção de nota parcial na disciplina de Tópicos Especial em Engenharia de Software e Sistemas Computacionais I, ministrada pelo Professor Doutor Patrício de Alencar Silva, no Programa de Pós-Graduação em Ciência da Computação (PPgCC) Uern-Ufersa, em nível de _stricto sensu_ (mestrado).
 
-===========================================================================================
+==========================================================================================
 
 # **VARK model learning**
 O modelo VARK foi desenvolvido por Neil D. Fleming em 1987, com o objetivo de ajudar educadores a entender como os alunos aprendem melhor.
@@ -40,38 +40,46 @@ A prática e o envolvimento sensorial tornam a compreensão mais profunda e sign
 Elas gostam de fazer, experimentar, atividades práticas, experimentos ou trabalhos em grupo.
 
 ##  Como identificar os estilos
+Para identificar a qual estilo de aprendiagem uma pessoa pertence é necessario responder ao questionário desenvolvido por Fleming.
+Atualmente, o questionário está na [versão 8.02](https://vark-learn.com/the-vark-questionnaire/) e disponível no web site [VARK-Learn](https://vark-learn.com) mantido por apoiadores do professor Fleming.
+
+==========================================================================================
+
+# **SOBRE A ONTOLOGIA**
+
+##  Propósito
+Esta ontologia tem como objetivo propor uma possível visão, não definitiva, do modelo de aprendizagem sensorial VARK. Estruturando o modelo de forma a melhorar a percepção dos estilo de aprendizagem dos aprendizes em todos os níveis educacionais (educação básica e superior) previstas nos incisos I e II do Art. 21 da lei 9.394/1996 ([Lei de Diretrizes e Bases da Educação no Brasil - LDB](https://www.planalto.gov.br/ccivil_03/LEIS/L9394compilado.htm)), bem como dos educadores e docentes. Através dessa compreenção, o aprendiz poderá otimizar o modo como aprende e os educadores e docentes prover uma melhor experiência do estudos aos seus aprendizes.
+
+##  Linguagens
+Esta ontologia foi desenvolvida em duas linguagens complementares.
+A primeira em _OntoUML_. Cujo o objetivo foi dar uma maior abstração dos termos, terminologias e aspectos das partes e artefatos envolvidos no processo de reconhecimento do estilo.
+O segundo em _OWL_. Aqui, o objetivo é consolidar as interações entre os agentes, artefatos e aspectos do modelo VARK.
 
 
-===========================================================================================
+==========================================================================================
+### **Modelo OntoUML**
 
-# **Sobre a ontologia**
-
-
-===========================================================================================
-## **Modelo OntoUML**
-
-Utilizou-se o software Visual Paradigm (v17.2), para confeccionados 3 visões do modelo em _OntoUML_ para explicar o modelo VARK nesta proposta de ontologia. São eles:
+Para modelagem em _OntoUML_, utilizou-se o software [__Visual Paradigm (v17.2)__](https://www.visual-paradigm.com/download/community.jsp) e o [_plugin OntoUML_](https://github.com/OntoUML). Do qual, foram confeccionados 3 visões para explicar o modelo VARK. São eles:
 
 ***Estrutura do modelo VARK***
-Nesta visão, mostra-se uma visão geral do modelo/estilo de aprendizagem VARK. Distinguido os agentes envolvidos, bem como, suas relações.
+Aqui, mostra-se uma visão geral do modelo/estilo de aprendizagem VARK. Distinguido os agentes envolvidos, bem como, suas relações.
 
 ![Estrutura do modelo VARK](VARK_Structure.jpg)
 
 ***Classificação dos estilos***
-Esta visão tem o foco em como pode-se classificar os aprendizes de acordo com sua habilidades. Distinguindo se o aprendiz tem um estilo Dominate, Primário, Secundário ou é do tipo Multimodal (quando tem competências em grau significativo nos quatro estilos).
+Esta visão tem o foco em como se pode classificar os aprendizes de acordo com sua habilidades. Distinguindo se o aprendiz tem um estilo **Dominate**, **Primário**, **Secundário** ou é do tipo **Multimodal** (quando tem competências em grau significativo nos quatro estilos).
 
 ![Classificação](VARK_Classify.jpg)
 
 ***Metodologia de ensino***
-Esta visão tem como objetivo descrever as melhores práticas que os educdores podem promover em suas aulas para os diferentes estilos do modelo VARK.
+Esta visão tem como objetivo descrever as melhores práticas que os educadores e docentes podem promover em suas aulas para os diferentes estilos do modelo VARK.
 
 ![Metodologia](VARK_Methodology.jpg)
 
-===========================================================================================
+==========================================================================================
 
-## **Modelo OWL**
-Após a confecção do modelo em OntoUML, fez-se exportação do modelo para extensão _Turtle_ (.ttl) no Visual Paradigm.
-Com base no arquivo OntoUML, foi modelado o arquivo e _OWL_ no software **Protégé**.
+### **Modelo OWL**
+Após a confecção do modelo em _OntoUML_, fez-se exportação do modelo para extensão _Turtle (.ttl)_ no __Visual Paradigm__.
+Com base no arquivo _OntoUML_, foi modelado o arquivo e _OWL_ no software [**Protégé**](https://protege.stanford.edu/).
 
-
-===========================================================================================
+==========================================================================================
