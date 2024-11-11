@@ -21,7 +21,7 @@ Costumam ser mais observadores e gostam de ter uma visão geral dos assuntos.
 Gostam de observar demonstrações.
 
 2. ***Auditivo (Auditive):***
-Também encontramos na literatua o termo **Aural** (em inglês), para se referir aos aprendizes auditivos. Eles aprendem melhor com sons ou ouvindo. Seja através de palestras, conversas, discussões, apresentações orais, podcasts, músicas ou gravações;
+Também encontramos na literatura o termo **Aural** (em inglês), para se referir aos aprendizes auditivos. Eles aprendem melhor com sons ou ouvindo. Seja através de palestras, conversas, discussões, apresentações orais, podcasts, músicas ou gravações;
 Estes aprendizes retêm bem o conteúdo ao escutar ou ao se engajar em debates e atividades interativas.
 Em geral, para essas pessoas, a compreensão é mais eficiente ao ouvir explicações e contextualizar ideias por meio de conversação.
 Costumam ser bons ouvintes e se beneficiam de explicações verbais.
